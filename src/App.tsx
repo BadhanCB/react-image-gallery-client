@@ -1,12 +1,10 @@
-import Header from './components/Header'
-import Gallery from './components/Gallery'
+import HomePage from "./pages/HomePage"
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Gallery />
+      <HomePage />
     </>
   )
 }
