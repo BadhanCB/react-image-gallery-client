@@ -1,5 +1,6 @@
 // type Props = {}
 import img1 from "../../assets/images/image-1.webp";
+import AddImageButton from "./AddImageButton";
 import GalleryImage from "./GalleryImage";
 
 const Gallery = () => {
@@ -67,6 +68,7 @@ const Gallery = () => {
       {images.map((img, i) => (
         <GalleryImage imgUrl={img.url} imgName={img.name} key={i} />
       ))}
+      <AddImageButton />
     </main>
   );
 };

@@ -8,7 +8,7 @@ const GalleryImage = ({ imgUrl, imgName }: Props) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
 
   return (
-    <figure className="border rounded-lg sm:first:col-span-2 sm:first:row-span-2 group relative cursor-pointer">
+    <figure className="border-2 rounded-lg sm:first:col-span-2 sm:first:row-span-2 group relative cursor-pointer">
       <img
         src={imgUrl}
         alt={imgName}
