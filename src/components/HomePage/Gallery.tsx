@@ -1,7 +1,7 @@
-// type Props = {}
 import img1 from "../../assets/images/image-1.webp";
 import AddImageButton from "./AddImageButton";
 import GalleryImage from "./GalleryImage";
+// type Props = {}
 
 const Gallery = () => {
   const images = [
