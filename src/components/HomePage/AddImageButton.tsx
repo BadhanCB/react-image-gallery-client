@@ -12,6 +12,7 @@ const AddImageButton = () => {
         <img src={photoIcon} alt="photo icon" className="h-8 w-8" />
         <p className="">Add Image</p>
       </button>
+      {/* pop up a modal to upload image */}
       <AddImageModal
         isOpenModal={isOpenModal}
         setIsOpenModal={setIsOpenModal}

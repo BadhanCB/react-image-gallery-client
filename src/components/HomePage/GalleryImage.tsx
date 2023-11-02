@@ -1,17 +1,17 @@
 import { useState } from "react";
+import { Image } from "../../types/image.type";
 type Props = {
-  imgUrl: string;
-  imgName: string;
+  image: Image
 };
 
-const GalleryImage = ({ imgUrl, imgName }: Props) => {
+const GalleryImage = ({ image }: Props) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
 
   return (
     <figure className="border-2 rounded-lg sm:first:col-span-2 sm:first:row-span-2 group relative cursor-pointer">
       <img
-        src={imgUrl}
-        alt={imgName}
+        src={`data:${image.imgData.type};base64, ${image.imgData.img}`}
+        alt={image.name}
         className={`h-full w-full object-cover object-center rounded-lg group-hover:brightness-50 ${isSelected && 'opacity-50 contrast-75'}`}
       />
       <input
