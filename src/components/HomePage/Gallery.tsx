@@ -8,7 +8,7 @@ const Gallery = () => {
   return (
     <main className="py-3 px-7 grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] grid-rows-[repeat(1,_200px)] auto-rows-[200px] gap-5">
       {images.map((img, i) => (
-        <GalleryImage image={img} key={i} />
+        <GalleryImage img={img} key={i} />
       ))}
       <AddImageButton />
     </main>

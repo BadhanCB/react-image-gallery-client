@@ -1,3 +1,4 @@
+//svg coppied from heroicons.com
 const Close = () => {
   return (
     <svg
