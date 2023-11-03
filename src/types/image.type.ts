@@ -1,6 +1,6 @@
 export type Image = {
   _id: string;
-  slNo: number;
+  id: number;
   name: string;
   imgData: {
     img: string;

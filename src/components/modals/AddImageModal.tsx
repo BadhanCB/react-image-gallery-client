@@ -23,9 +23,9 @@ const AddImageModal = ({ isOpenModal, setIsOpenModal }: Props) => {
       if (imageFile) {
         const formData: FormData = new FormData();
         formData.append("file", imageFile[0]);
-        formData.append("slNo", images.length.toString());
+        formData.append("id", images.length.toString());
         await fetch(
-          "http://localhost:4321/gallery",
+          "https://react-image-gallery.onrender.com/gallery",
           {
             method: "POST",
             body: formData,
