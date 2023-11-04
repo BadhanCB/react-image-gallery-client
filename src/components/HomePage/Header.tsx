@@ -1,7 +1,7 @@
 import { useImages } from "../../providers/ImageContextProvider";
 
 const Header = () => {
-  const { selectedImages, deleteSelectedImages } = useImages();
+  const { selectedImages, deleteSelectedImages, images } = useImages();
 
   return (
     <header className="py-3 px-7 border-b flex justify-between flex-wrap">
@@ -24,6 +24,7 @@ const Header = () => {
           {selectedImages.length > 1 ? " Files" : " File"}
         </button>
       ) : null}
+      <button onClick={() => console.log(images)}>Images</button>
     </header>
   );
 };

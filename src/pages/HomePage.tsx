@@ -2,8 +2,6 @@ import Gallery from "../components/HomePage/Gallery";
 import Header from "../components/HomePage/Header";
 import ImageContextProvider from "../providers/ImageContextProvider";
 
-// type Props = {}
-
 const HomePage = () => {
   return (
     <ImageContextProvider>

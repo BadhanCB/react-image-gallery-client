@@ -28,6 +28,8 @@ const Gallery = () => {
         const newIndex = images.findIndex((img) => img.id === over?.id);
         return arrayMove(imgs, oldIndex, newIndex);
       });
+
+      setImages((imgs) => imgs.map((img, i) => ({ ...img, id: i + 1 })));
     }
   };
 

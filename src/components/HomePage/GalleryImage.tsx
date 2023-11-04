@@ -41,7 +41,7 @@ const GalleryImage = ({ img }: Props) => {
   };
 
   return (
-      <figure  className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group relative cursor-pointer" >
+      <figure className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group relative cursor-pointer" >
         <img
           style={styles}
           ref={setNodeRef}

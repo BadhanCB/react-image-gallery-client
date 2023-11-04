@@ -38,14 +38,14 @@ const ImageContextProvider = ({ children }: Props) => {
   const [selectedImages, setSelectedImages] = useState<Image[]>([]);
 
   useEffect(() => {
-    fetch("https://react-image-gallery.onrender.com/gallery")
+    fetch("http://localhost:4321/gallery")
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.log(err));
   }, []);
 
   const reFetchImages = () => {
-    fetch("https://react-image-gallery.onrender.com/gallery")
+    fetch("http://localhost:4321/gallery")
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.log(err));
@@ -55,7 +55,7 @@ const ImageContextProvider = ({ children }: Props) => {
     try {
       const selectedImageIds = selectedImages.map((img) => img._id);
 
-      const response = await fetch("https://react-image-gallery.onrender.com/gallery", {
+      const response = await fetch("http://localhost:4321/gallery", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
