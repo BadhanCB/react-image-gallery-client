@@ -15,6 +15,7 @@ import {
   arrayMove,
   rectSortingStrategy,
 } from "@dnd-kit/sortable";
+import HomePageSkeletonLoader from "../shared/HomePageSkeletonLoader";
 
 const Gallery = () => {
   const { images, setImages } = useImages();
@@ -41,7 +42,8 @@ const Gallery = () => {
       onDragEnd={handleDragEnd}
       sensors={sensors}
     >
-      <SortableContext items={images} strategy={rectSortingStrategy}>
+      {images.length ? (
+        <SortableContext items={images} strategy={rectSortingStrategy}>
         <main className="py-3 px-7 grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] grid-rows-[repeat(1,_200px)] auto-rows-[200px] gap-5">
           {images.map((img, i) => (
             <GalleryImage img={img} key={i} />
@@ -49,6 +51,9 @@ const Gallery = () => {
           <AddImageButton />
         </main>
       </SortableContext>
+      ) : (
+        <HomePageSkeletonLoader />
+      )}
     </DndContext>
   );
 };
