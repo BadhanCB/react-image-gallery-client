@@ -1,7 +1,7 @@
 const HomePageSkeletonLoader = () => {
   return (
-    <main className="py-3 px-7 grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] grid-rows-[repeat(1,_200px)] auto-rows-[200px] gap-5 animate-pulse">
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+    <main className="py-3 px-7 grid grid-cols-[repeat(auto-fill,_minmax(120px,_1fr))] grid-rows-[repeat(1,_120px)] auto-rows-[120px] gap-2 xs:gap-3 md:gap-4 lg:gap-5 animate-pulse">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -17,7 +17,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -33,7 +33,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -49,7 +49,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -65,7 +65,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -81,7 +81,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -97,7 +97,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -113,7 +113,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -129,7 +129,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -145,7 +145,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -161,7 +161,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -177,7 +177,7 @@ const HomePageSkeletonLoader = () => {
           />
         </svg>
       </div>
-      <div className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
+      <div className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer bg-slate-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

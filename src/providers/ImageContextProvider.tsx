@@ -20,6 +20,7 @@ type ImgContextType = {
   selectedImages: Image[];
   setSelectedImages: Dispatch<SetStateAction<Image[]>>;
   deleteSelectedImages: () => void;
+  updateImageSerialId: () => Promise<void>
 };
 
 const IMAGE_CONTEXT = createContext<ImgContextType>({
@@ -29,6 +30,7 @@ const IMAGE_CONTEXT = createContext<ImgContextType>({
   selectedImages: [],
   setSelectedImages: () => {},
   deleteSelectedImages: () => {},
+  updateImageSerialId: () => Promise.resolve(),
 });
 
 export const useImages = () => useContext(IMAGE_CONTEXT);
@@ -55,18 +57,41 @@ const ImageContextProvider = ({ children }: Props) => {
     try {
       const selectedImageIds = selectedImages.map((img) => img._id);
 
-      const response = await fetch("https://react-image-gallery.onrender.com/gallery", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(selectedImageIds),
-      });
+      const response = await fetch(
+        "https://react-image-gallery.onrender.com/gallery",
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(selectedImageIds),
+        }
+      );
       const data = await response.json();
 
       console.log(data);
       setSelectedImages([]);
       reFetchImages();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateImageSerialId = async () => {
+    try {
+      const newIds = images.map((img) => {
+        return { _id: img._id, id: img.id };
+      });
+  
+      const response = await fetch("https://react-image-gallery.onrender.com/gallery", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newIds),
+      });
+  
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -81,6 +106,7 @@ const ImageContextProvider = ({ children }: Props) => {
         selectedImages,
         setSelectedImages,
         deleteSelectedImages,
+        updateImageSerialId
       }}
     >
       {children}

@@ -87,8 +87,8 @@ const GalleryImage = ({ img, style }: Props) => {
           type="checkbox"
           checked={isSelected}
           onChange={handleChange}
-          name="img-checkbox"
-          id="img-checkbox"
+          name={`${img.name}-checkbox`}
+          id={`${img.name}-checkbox`}
           className={`absolute top-4 left-4 cursor-pointer ${
             isSelected ? "visible" : "invisible"
           } group-hover:visible h-5 w-5`}

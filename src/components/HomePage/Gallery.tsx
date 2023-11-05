@@ -23,7 +23,7 @@ import { Image } from "../../types/image.type";
 import OverlayImage from "./OverlayImage";
 
 const Gallery = () => {
-  const { images, setImages } = useImages();
+  const { images, setImages, updateImageSerialId } = useImages();
   const [activeImage, setActiveImage] = useState<Image | undefined>(undefined);
 
   const handleDragStart = (event: DragStartEvent) => {
@@ -43,6 +43,8 @@ const Gallery = () => {
 
       setImages((imgs) => imgs.map((img, i) => ({ ...img, id: i + 1 })));
     }
+
+    updateImageSerialId();
   };
 
   const handleDragCancle = () => {
