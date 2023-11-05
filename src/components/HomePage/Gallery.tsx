@@ -71,7 +71,7 @@ const Gallery = () => {
       ) : (
         <HomePageSkeletonLoader />
       )}
-      <DragOverlay>
+      <DragOverlay adjustScale={true}>
         {activeImage ? (<OverlayImage img={activeImage} />) : null}
       </DragOverlay>
     </DndContext>

@@ -29,7 +29,7 @@ const OverlayImage = ({img}: Props) => {
         {...listeners}
         src={`data:${img.imgData.type};base64, ${img.imgData.img}`}
         alt={img.name}
-        className={`h-full w-full object-cover object-center rounded-lg group-hover:brightness-50 border-2`}
+        className={`h-full w-full object-cover object-center rounded-lg group-hover:brightness-50 border-2 sm:first:col-span-2 sm:first:row-span-2`}
       />
   )
 }
