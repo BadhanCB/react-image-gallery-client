@@ -1,6 +1,8 @@
 import {
   DndContext,
   DragEndEvent,
+  DragOverlay,
+  DragStartEvent,
   MouseSensor,
   TouchSensor,
   closestCenter,
@@ -16,13 +18,22 @@ import {
   rectSortingStrategy,
 } from "@dnd-kit/sortable";
 import HomePageSkeletonLoader from "../shared/HomePageSkeletonLoader";
+import { useState } from "react";
+import { Image } from "../../types/image.type";
+import OverlayImage from "./OverlayImage";
 
 const Gallery = () => {
   const { images, setImages } = useImages();
+  const [activeImage, setActiveImage] = useState<Image | undefined>(undefined);
+
+  const handleDragStart = (event: DragStartEvent) => {
+    setActiveImage(images.find(img => img.id == event.active.id))
+  }
 
   const handleDragEnd = (event: DragEndEvent) => {
+    setActiveImage(undefined);
     const { active, over } = event;
-
+    
     if (active.id !== over?.id) {
       setImages((imgs) => {
         const oldIndex = images.findIndex((img) => img.id === active.id);
@@ -34,12 +45,18 @@ const Gallery = () => {
     }
   };
 
+  const handleDragCancle = () => {
+    setActiveImage(undefined);
+  }
+
   const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
 
   return (
     <DndContext
       collisionDetection={closestCenter}
+      onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
+      onDragCancel={handleDragCancle}
       sensors={sensors}
     >
       {images.length ? (
@@ -54,6 +71,9 @@ const Gallery = () => {
       ) : (
         <HomePageSkeletonLoader />
       )}
+      <DragOverlay>
+        {activeImage ? (<OverlayImage img={activeImage} />) : null}
+      </DragOverlay>
     </DndContext>
   );
 };
