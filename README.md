@@ -1,28 +1,15 @@
-# React + TypeScript + Vite
+# React Image Gallery
+Live Demo: https://react-image-gallery-dnd.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack: ``React``, ``TypeScript``, ``Tailwind CSS``, ``DnDKit library``, ``Vite``
 
-Currently, two official plugins are available:
+## Key Features
+- Display images with one feature image larger than the others
+- Rearrange the order of images using Drag and Drop
+- Users select multiple images and delete them
+- users set a feature image by sorting
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# react-image-gallery-client
+### Server Side
+Source Code: https://github.com/BadhanCB/react-image-gallery-server \
+Root Path: https://react-image-gallery.onrender.com/ \
+GET, PUT, PATCH & DELETE Route: https://react-image-gallery.onrender.com/gallery
