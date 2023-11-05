@@ -83,7 +83,7 @@ const ImageContextProvider = ({ children }: Props) => {
         return { _id: img._id, id: img.id };
       });
   
-      const response = await fetch("http://localhost:4321/gallery", {
+      const response = await fetch("https://react-image-gallery.onrender.com/gallery", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
