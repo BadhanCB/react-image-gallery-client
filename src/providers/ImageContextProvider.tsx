@@ -20,7 +20,7 @@ type ImgContextType = {
   selectedImages: Image[];
   setSelectedImages: Dispatch<SetStateAction<Image[]>>;
   deleteSelectedImages: () => void;
-  updateImageSerialId: () => Promise<void>
+  updateImageSerialId: (newImgs: Image[]) => Promise<void>
 };
 
 const IMAGE_CONTEXT = createContext<ImgContextType>({
@@ -77,13 +77,13 @@ const ImageContextProvider = ({ children }: Props) => {
     }
   };
 
-  const updateImageSerialId = async () => {
+  const updateImageSerialId = async (newImgs: Image[]) => {
     try {
-      const newIds = images.map((img) => {
+      const newIds = newImgs.map((img) => {
         return { _id: img._id, id: img.id };
       });
   
-      const response = await fetch("https://react-image-gallery.onrender.com/gallery", {
+      const response = await fetch("http://localhost:4321/gallery", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

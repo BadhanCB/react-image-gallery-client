@@ -38,13 +38,13 @@ const Gallery = () => {
       setImages((imgs) => {
         const oldIndex = images.findIndex((img) => img.id === active.id);
         const newIndex = images.findIndex((img) => img.id === over?.id);
-        return arrayMove(imgs, oldIndex, newIndex);
+        const orderedImgs = arrayMove(imgs, oldIndex, newIndex);
+        updateImageSerialId(orderedImgs);
+        return orderedImgs;
       });
 
       setImages((imgs) => imgs.map((img, i) => ({ ...img, id: i + 1 })));
     }
-
-    updateImageSerialId();
   };
 
   const handleDragCancle = () => {
