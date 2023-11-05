@@ -61,7 +61,7 @@ const Gallery = () => {
     >
       {images.length ? (
         <SortableContext items={images} strategy={rectSortingStrategy}>
-        <main className="py-3 px-7 grid grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] grid-rows-[repeat(1,_200px)] auto-rows-[200px] gap-5">
+        <main className="py-3 px-7 grid grid-cols-[repeat(auto-fill,_minmax(120px,_1fr))] grid-rows-[repeat(1,_120px)] auto-rows-[120px] gap-2 sm:gap-3 md:gap-4 lg:gap-5">
           {images.map((img, i) => (
             <GalleryImage img={img} key={i} />
           ))}

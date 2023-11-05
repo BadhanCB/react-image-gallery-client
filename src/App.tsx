@@ -5,9 +5,9 @@ function App() {
   initializeFirebase();
   
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen flex justify-center items-center p-5">
       <HomePage />
-    </>
+    </div>
   )
 }
 

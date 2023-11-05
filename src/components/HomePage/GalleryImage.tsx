@@ -69,7 +69,8 @@ const GalleryImage = ({ img, style }: Props) => {
   return (
     <figure
       style={style}
-      className="rounded-lg sm:first:col-span-2 sm:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer"
+      //used custom breakpoint "xs", which defined to the tailwind.config.js 
+      className="rounded-lg xs:first:col-span-2 xs:first:row-span-2 group hover:backdrop-brightness-50 relative cursor-pointer"
     >
       <img
         style={styles}
